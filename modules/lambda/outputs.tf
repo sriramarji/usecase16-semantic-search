@@ -6,6 +6,6 @@ output "lambda_name" {
   value = aws_lambda_function.test.function_name
 }
 
-# output "lambda_alias_arn" {
-#   value = aws_lambda_alias.live.arn
-# }
+output "lambda_alias_arn" {
+  value = aws_lambda_alias.test.arn
+}

@@ -23,4 +23,9 @@ resource "aws_lambda_function" "test" {
 }
 
 
-
+resource "aws_lambda_alias" "test-alive" {
+  name             = "lambda-alive"
+  function_name    = aws_lambda_function.test.function_name
+  function_version = aws_lambda_function.test.version
+  depends_on       = [aws_lambda_function.test]
+}

@@ -9,6 +9,7 @@ variable "handler" {
   type = string
   default = "main.lambda_handler" 
 }
+
 variable "runtime" { 
   type = string 
 }
@@ -49,4 +50,7 @@ variable "timeout" {
 variable "memory_size" {
   type    = number
   default = 512
+}
+
+variable "semantic_layer_zip" {
 }
